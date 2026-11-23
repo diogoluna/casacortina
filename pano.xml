@@ -55,6 +55,7 @@
     <hotspots>
       <hotspot description="" distance="4.62557" id="Point01" pan="-25.7752" skinid="ht_node" target="$fwd" tilt="1.59028e-15" title="DCIM\100GOPRO\GS__1249.JPG" url="{node2}"/>
       <hotspot description="" distance="5.54179" id="Point02" pan="65.0922" skinid="ht_node" target="$fwd" tilt="-1.19271e-15" title="DCIM\100GOPRO\GS__1270.JPG" url="{node11}"/>
+      <hotspot description="" distance="7.74073" id="Point03" pan="142.787" skinid="ht_node" target="$fwd" tilt="0" title="DCIM\100GOPRO\GS__1258.JPG" url="{node10}"/>
     </hotspots>
     <media/>
     <animation animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0" useinautorotation="0"/>
@@ -137,6 +138,7 @@
       <hotspot description="" id="Point01" pan="10.04" skinid="ht_url" target="_blank" tilt="-0.67" title="" url=""/>
       <hotspot description="" distance="2.62786" id="Point02" pan="-5.03249" skinid="ht_node" target="$fwd" tilt="0" title="DCIM\100GOPRO\GS__1257.JPG" url="{node9}"/>
       <hotspot description="" distance="2.96086" id="Point03" pan="28.0481" skinid="ht_node" target="$fwd" tilt="0" title="DCIM\100GOPRO\GS__1274.JPG" url="{node15}"/>
+      <hotspot description="" distance="7.74073" id="Point04" pan="167.787" skinid="ht_node" target="$fwd" tilt="0" title="DCIM\100GOPRO\GS__1251.JPG" url="{node3}"/>
     </hotspots>
     <media/>
     <animation animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0" useinautorotation="0"/>
@@ -242,7 +244,7 @@
     <animation animsequence="Animation01" clipsrandom="0" syncanimationwithvideo="0" useinautorotation="0"/>
   </panorama>
   <masternode>
-    <userdata author="" comment="" copyright="" description="" tags="" title="" uuid="{fa39d819-ac02-478a-91f6-e7f0795c25a7}"/>
+    <userdata author="" comment="" copyright="" description="" tags="" title="" uuid="{5c99cecf-98df-4f16-a334-2cda0ed9a0e7}"/>
     <transition blendcolor="0x000000" blendtime="1" delay="none" enabled="1" softedge="0" type="crossdissolve" zoomafterinfov="140" zoomafteroutfov="40" zoomfov="40" zoomin="0" zoomout="0" zoomoutpause="1" zoomspeed="2"/>
     <control contextfullscreen="1" contextprojections="0" contextvr="1" dblclickfullscreen="0" hideabout="0" invertcontrol="1" invertwheel="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" lockedwheel="0" rubberband="0" sensitivity="8" simulatemass="1" speedwheel="1" zoomcentercursor="1"/>
     <animationsequences>

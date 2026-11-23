@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 8.0.1/22530
 // Filename: quaranta.ggsk
-// Generated 2026-11-23T15:27:14Z
+// Generated 2026-11-23T21:18:15Z
 
 function pano2vrSkin(player,base) {
 	player.addVariable('vis_sounds_splashscreen', 2, false, { ignoreInState: 1  });
