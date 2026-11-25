@@ -240,20 +240,20 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script>
-        // Trilha Espacial Real: Todos os 12 cômodos posicionados em sequência contínua (Eixo Z)
+        // Trilha Espacial Real com Alinhamento de Azimute (Norte Verdadeiro do pano.xml)
         const SPATIAL_ROOMS = [
-            { id: "node1", title: "Entrada Principal", file: "GS__1248.JPG", zPos: 0 },
-            { id: "node2", title: "Hall de Cortinas", file: "GS__1249.JPG", zPos: -14 },
-            { id: "node3", title: "Mostruário Central", file: "GS__1251.JPG", zPos: -28 },
-            { id: "node11", title: "Espaço Tapetes & Almofadas", file: "GS__1270.JPG", zPos: -42 },
-            { id: "node12", title: "Ambiente Living Decor", file: "GS__1271.JPG", zPos: -56 },
-            { id: "node7", title: "Espaço Tecidos Finos", file: "GS__1255.JPG", zPos: -70 },
-            { id: "node8", title: "Galeria de Persianas", file: "GS__1256.JPG", zPos: -84 },
-            { id: "node9", title: "Lounge de Atendimento", file: "GS__1257.JPG", zPos: -98 },
-            { id: "node10", title: "Showroom Papéis de Parede", file: "GS__1258.JPG", zPos: -112 },
-            { id: "node13", title: "Mesa de Projetos VIP", file: "GS__1272.JPG", zPos: -126 },
-            { id: "node14", title: "Acabamentos Especiais", file: "GS__1273.JPG", zPos: -140 },
-            { id: "node15", title: "Área Externa & Fachada", file: "GS__1274.JPG", zPos: -154 }
+            { id: "node1", title: "Entrada Principal", file: "GS__1248.JPG", zPos: 0, heading: 217.386 },
+            { id: "node2", title: "Hall de Cortinas", file: "GS__1249.JPG", zPos: -14, heading: 212.816 },
+            { id: "node3", title: "Mostruário Central", file: "GS__1251.JPG", zPos: -28, heading: 0.0 },
+            { id: "node11", title: "Espaço Tapetes & Almofadas", file: "GS__1270.JPG", zPos: -42, heading: 207.471 },
+            { id: "node12", title: "Ambiente Living Decor", file: "GS__1271.JPG", zPos: -56, heading: 200.421 },
+            { id: "node7", title: "Espaço Tecidos Finos", file: "GS__1255.JPG", zPos: -70, heading: 118.82 },
+            { id: "node8", title: "Galeria de Persianas", file: "GS__1256.JPG", zPos: -84, heading: 110.84 },
+            { id: "node9", title: "Lounge de Atendimento", file: "GS__1257.JPG", zPos: -98, heading: 201.998 },
+            { id: "node10", title: "Showroom Papéis de Parede", file: "GS__1258.JPG", zPos: -112, heading: 205.0 },
+            { id: "node13", title: "Mesa de Projetos VIP", file: "GS__1272.JPG", zPos: -126, heading: 201.271 },
+            { id: "node14", title: "Acabamentos Especiais", file: "GS__1273.JPG", zPos: -140, heading: 213.683 },
+            { id: "node15", title: "Área Externa & Fachada", file: "GS__1274.JPG", zPos: -154, heading: 127.812 }
         ];
 
         let scene, camera, renderer;
@@ -302,6 +302,12 @@
 
                 const mesh = new THREE.Mesh(geo, mat);
                 mesh.position.set(0, 1.6, room.zPos);
+
+                // Aplica rotação azimutal para alinhar o Norte da foto com o corredor de caminhada
+                // Converte graus para radianos e alinha com a orientação física do Pano2VR
+                const yawRad = THREE.MathUtils.degToRad(-room.heading);
+                mesh.rotation.y = yawRad;
+
                 scene.add(mesh);
 
                 roomSpheres.push({
